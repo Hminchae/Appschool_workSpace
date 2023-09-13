@@ -1,1 +1,1 @@
-{"tfjsVersion":"1.3.1","tmVersion":"2.4.7","packageVersion":"0.8.4-alpha2","packageName":"@teachablemachine/image","timeStamp":"2023-09-12T05:51:11.239Z","userMetadata":{},"modelName":"tm-my-image-model","labels":["에어팟","아이폰","물티슈","텀블러","마우스","배경"],"imageSize":224}
+{"tfjsVersion":"1.3.1","tmVersion":"2.4.7","packageVersion":"0.8.4-alpha2","packageName":"@teachablemachine/image","timeStamp":"2023-09-12T05:51:11.239Z","userMetadata":{},"modelName":"tm-my-image-model","labels":["a","b","c","d","e","f"],"imageSize":224}
