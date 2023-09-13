@@ -2,10 +2,95 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript 사용 방법</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 주석 사용법, command + /  -->
     <h1>JavaScript 사용 방법</h1>
-    <script src="myScript.js"></script>
+    <h2>로또 번호 추첨기</h2>
+    <script>
+        //  var name = "황민채"
+        //  var bool = true
+        // document.write(typeof name);
+        // document.write(typeof bool);
+        // 자료형과 자료형 확인법
+        //
+        // var num = Math.random() * 45 + 1; -> Math.random = 0이상 1미만 실수 랜덤 형성 함수
+        // var ball1 = parseInt(num)
+        // document.write(ball1);
+        // 랜덤으로 숫자 하나 뽑기
+        //
+        // var lotto = [1,2,3,4,5,6];
+        // lotto.push(7);
+        // document.write(lotto[0]);
+        // 배열 사용해보기
+        //
+        // var lotto =[]
+        // lotto.push(parseInt(Math.random() * 45 + 1 ));
+        // lotto.push(parseInt(Math.random() * 45 + 1 ));
+        // lotto.push(parseInt(Math.random() * 45 + 1 ));
+        // lotto.push(parseInt(Math.random() * 45 + 1 ));
+        // lotto.push(parseInt(Math.random() * 45 + 1 ));
+        // lotto.push(parseInt(Math.random() * 45 + 1 ));
+        // document.write(lotto);
+        // DRY.. 
+        //
+        // for (var i = 0; i < 6; i++){
+        //     document.write(i);
+        // }
+        // for문 기본형태
+        // var lotto =[]
+        // for (var i = 0; i < 6; i++){
+        //     lotto.push(parseInt(Math.random() * 45 + 1 ));
+        // }
+        // document.write(lotto);
+        // 중복되는 값은 어떻게 처리?
+        //
+        // if (조건)
+        //.indexOf(값)
+        // var lotto = [];
+        // for (var i = 0; i < 6; i++){
+        //     var num = parseInt(Math.random() * 45 + 1);
+        //     if (lotto.indexOf(num)== -1) {
+        //         lotto.push(num);
+        //     }
+        // }
+        // document.write(lotto);
+        // 중복된 값이 생기면 6개가 안 뽑힐 수 도 있음
+        // while (조건){
+        //  반복 코드
+        //}
+        //
+        // var lotto = []
+        // while (lotto.length < 6) {
+        //     var num = parseInt(Math.random() * 45 + 1);
+        //     if (lotto.indexOf(num) == -1 ){
+        //         lotto.push(num)
+        //     }
+        // }
+        // document.write(lotto)
+        // 정렬하고 싶다면?
+        //
+        //
+        var lotto = []
+        while (lotto.length < 6) {
+            var num = parseInt(Math.random() * 45 + 1);
+            if (lotto.indexOf(num) == -1 ){
+                lotto.push(num)
+            }
+        }
+        lotto.sort((a,b)=>a-b)
+        // document.write(lotto)
+        document.write("<div class='ball ball1'>" + lotto[0] + "</div>");
+        document.write("<div class='ball ball2'>" + lotto[1] + "</div>");
+        document.write("<div class='ball ball3'>" + lotto[2] + "</div>");
+        document.write("<div class='ball ball4'>" + lotto[3] + "</div>");
+        document.write("<div class='ball ball5'>" + lotto[4] + "</div>");
+        document.write("<div class='ball ball6'>" + lotto[5] + "</div>");
+
+        // .sort((a,b)==>a-b) 오름차순 정렬
+    </script>
 </body>
 </html>
