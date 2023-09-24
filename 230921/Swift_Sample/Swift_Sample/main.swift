@@ -210,16 +210,20 @@ import Foundation
 //---------------------------------------------
 //조건문 예제10
 
-print("user:", terminator:"")
-let data = readLine()!
+//print("user:", terminator:"")
+//let data = readLine()!
+//
+//switch data{
+//case "안녕하세요." :
+//    print("mac: 네, 안녕하세요!")
+//case "반가워요." :
+//    print("mac: 네, 반가워요!")
+//case "수고하세요." :
+//    print("mac: 네, 수고하세요!")
+//default :
+//    print("잘못 입력하셨습니다.")
+//}
 
-switch data{
-case "안녕하세요." :
-    print("mac: 네, 안녕하세요!")
-case "반가워요." :
-    print("mac: 네, 반가워요!")
-case "수고하세요." :
-    print("mac: 네, 수고하세요!")
-default :
-    print("잘못 입력하셨습니다.")
-}
+
+
+let arrX = Array(x)

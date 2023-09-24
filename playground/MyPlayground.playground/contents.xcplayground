@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='귤농장'/>
+        <page name='연산자예제'/>
+        <page name='키보드입력'/>
+        <page name='3항 연산자'/>
+        <page name='array'/>
+    </pages>
+</playground>

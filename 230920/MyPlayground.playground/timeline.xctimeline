@@ -2,5 +2,13 @@
 <Timeline
    version = "3.0">
    <TimelineItems>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/hwangminchae/Documents/GitHub/Appschool_workSpace/230920/MyPlayground.playground#CharacterRangeLen=1&amp;CharacterRangeLoc=66&amp;EndingColumnNumber=0&amp;EndingLineNumber=6&amp;StartingColumnNumber=0&amp;StartingLineNumber=5&amp;Timestamp=716875924.774048"
+         selectedRepresentationIndex = "0">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/hwangminchae/Documents/GitHub/Appschool_workSpace/230920/MyPlayground.playground#CharacterRangeLen=1&amp;CharacterRangeLoc=66&amp;EndingColumnNumber=0&amp;EndingLineNumber=6&amp;StartingColumnNumber=0&amp;StartingLineNumber=5&amp;Timestamp=716875924.7749569"
+         selectedRepresentationIndex = "0">
+      </LoggerValueHistoryTimelineItem>
    </TimelineItems>
 </Timeline>
