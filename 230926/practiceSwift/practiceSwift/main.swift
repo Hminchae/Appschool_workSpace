@@ -208,109 +208,155 @@ import Foundation
 //------------------------------------------------
 //class 예제 01~03 - 학생 정보 관리
 //------------------------------------------------
-
-class Student{
-    let name: String
-    let number: String
-    let age: Int
-    let scoreSwift: Int
-    let scoreiOS: Int
-    let scoreWeb: Int
-    
-    init(name: String, number: String, age: Int, scoreSwift: Int, scoreiOS: Int, scoreWeb: Int) {
-        self.name = name
-        self.number = number
-        self.age = age
-        self.scoreSwift = scoreSwift
-        self.scoreiOS = scoreiOS
-        self.scoreWeb = scoreWeb
-    }
-    func show(){
-        print("\(name)님 안녕하세요.")
-        print("[\(number),\(age)살]")
-        print ("\(name)님의 Swift 점수는 \(scoreSwift)점 입니다.")
-        print("\(name)님의 iOS 점수는 \(scoreiOS)점 입니다.")
-        print("\(name)님의 Web 점수는 \(scoreWeb)점 입니다.")
-    }
-}
-
-var student1 = Student(name: "홍길동", number:"20200677", age: 22, scoreSwift: 50,scoreiOS: 89, scoreWeb: 77)
-var student2 = Student(name: "김영희", number:"20190541", age: 26, scoreSwift: 90,scoreiOS: 85, scoreWeb: 70)
-
-student1.show()
-student2.show()
+//
+//class Student{
+//    let name: String
+//    let number: String
+//    let age: Int
+//    let scoreSwift: Int
+//    let scoreiOS: Int
+//    let scoreWeb: Int
+//
+//    init(name: String, number: String, age: Int, scoreSwift: Int, scoreiOS: Int, scoreWeb: Int) {
+//        self.name = name
+//        self.number = number
+//        self.age = age
+//        self.scoreSwift = scoreSwift
+//        self.scoreiOS = scoreiOS
+//        self.scoreWeb = scoreWeb
+//    }
+//    func show(){
+//        print("\(name)님 안녕하세요.")
+//        print("[\(number),\(age)살]")
+//        print ("\(name)님의 Swift 점수는 \(scoreSwift)점 입니다.")
+//        print("\(name)님의 iOS 점수는 \(scoreiOS)점 입니다.")
+//        print("\(name)님의 Web 점수는 \(scoreWeb)점 입니다.")
+//    }
+//}
+//
+//var student1 = Student(name: "홍길동", number:"20200677", age: 22, scoreSwift: 50,scoreiOS: 89, scoreWeb: 77)
+//var student2 = Student(name: "김영희", number:"20190541", age: 26, scoreSwift: 90,scoreiOS: 85, scoreWeb: 70)
+//
+//student1.show()
+//student2.show()
 
 
 //------------------------------------------------
 //class 예제 04 - 학생 정보 관리
 //------------------------------------------------
 
-class Person{
-    var name: String
-    var age: Int
-    //우왕 !!!!!!!
-    init(name: String, age: Int) {
-        self.name = name
-        self.age = age
-    }//이거요? 이것도 메소드?아하..!
-    
-    func getName()->String{
-        return self.name
-    }
-    func setName(newname: String){
-        self.name = newname
-    }
-    func getAge()->Int{
-        return self.age
-    }
-    func setAge(newage: Int){
-        self.age = newage
-    }
-}
-
-
-var person1 = Person(name: "홍길동", age: 25)
-var person2 = Person(name: "김영희", age: 27)
-
-print("str 1 객체 학생 이름:\(person1.getName()) 나이: \(person1.getAge())")
-print("str 2 객체 학생 이름:\(person2.getName()) 나이: \(person2.getAge())")
+//class Person{
+//    var name: String
+//    var age: Int
+//    //우왕 !!!!!!!
+//    init(name: String, age: Int) {
+//        self.name = name
+//        self.age = age
+//    }//이거요? 이것도 메소드?아하..!
+//
+//    func getName()->String{
+//        return self.name
+//    }
+//    func setName(newname: String){
+//        self.name = newname
+//    }
+//    func getAge()->Int{
+//        return self.age
+//    }
+//    func setAge(newage: Int){
+//        self.age = newage
+//    }
+//}
+//
+//
+//var person1 = Person(name: "홍길동", age: 25)
+//var person2 = Person(name: "김영희", age: 27)
+//
+//print("str 1 객체 학생 이름:\(person1.getName()) 나이: \(person1.getAge())")
+//print("str 2 객체 학생 이름:\(person2.getName()) 나이: \(person2.getAge())")
 
 
 //------------------------------------------------
 //class 예제 05 - 학생 정보 관리
 //------------------------------------------------
-class Calculator {
-    var num1: Int
-    var num2: Int
-    init(num1: Int, num2: Int) {
-        self.num1 = num1
-        self.num2 = num2
-    }
-    func setNum1(new: Int){
-        self.num1 = new
-    }
-    func setNum2(new: Int){
-        self.num2 = new
-    }
-    func sum() -> Int{
-        return self.num1 + self.num2
-    }
-    func sub() -> Int{
-        return self.num1 - self.num2
-    }
-    func mul() -> Int{
-        return self.num1 * self.num2
-    }
-    func div() -> Double{
-        return Double(self.num1) / Double(self.num2)
-    }
-    
-}
-//요 밑에 행동
-var cal = Calculator(num1: 75, num2: 5)
+//class Calculator {
+//    var num1: Int
+//    var num2: Int
+//    init(num1: Int, num2: Int) {
+//        self.num1 = num1
+//        self.num2 = num2
+//    }
+//    func setNum1(new: Int){
+//        self.num1 = new
+//    }
+//    func setNum2(new: Int){
+//        self.num2 = new
+//    }
+//    func sum() -> Int{
+//        return self.num1 + self.num2
+//    }
+//    func sub() -> Int{
+//        return self.num1 - self.num2
+//    }
+//    func mul() -> Int{
+//        return self.num1 * self.num2
+//    }
+//    func div() -> Double{
+//        return Double(self.num1) / Double(self.num2)
+//    }
+//
+//}
+////요 밑에 행동
+//var cal = Calculator(num1: 75, num2: 5)
+//
+//print(cal.sum())
+//print(cal.sub())
+//print(cal.mul())
+//print(cal.div())
 
-print(cal.sum())
-print(cal.sub())
-print(cal.mul())
-print(cal.div())
+//----------------------------------------------------------
+
+//class Coffee{
+//    var name: String
+//    var ingredient: [String]
+//    var needMilk: Bool
+//    init(name: String, ingredient: [String], needMilk: Bool) {
+//        self.name = name
+//        self.ingredient = ingredient
+//        self.needMilk = needMilk
+//    }
+//
+//    func getname()->String{
+//        return self.name
+//    }
+//    func setIngredient(new: String){
+//        self.ingredient.append(new)
+//    }
+//    func pourmilk(){
+//        if self.needMilk == true{
+//            print("그리고 우유 넣으세용")
+//                  }else {
+//                print("그리고 우유 넣지 마세요!")
+//            }
+//    }
+//    func readrecipe(){
+//        if self.ingredient.count == 1 {
+//            print("\(self.ingredient[0]) 넣으세요.")
+//        }else {
+//            print("\(name)은 \(self.ingredient[0])랑 \(self.ingredient[1]) 넣으세요.")
+//        }
+//
+//    }
+//}
+//
+//var menu1 = Coffee(name:"에스프레쏘",ingredient:["에스프레쏘"],needMilk: false)
+//var menu2 = Coffee(name:"카페모카",ingredient:["에스프레쏘","초콜릿"],needMilk: true)
+//var menu3 = Coffee(name:"카푸치노",ingredient:["에스프레쏘","시나몬"],needMilk: true)
+//var menu4 = Coffee(name:"바닐라라떼",ingredient:["에스프레쏘","바닐라"],needMilk: true)
+//var menu5 = Coffee(name:"고구마라떼",ingredient:["고구마","시럽"],needMilk: true)
+//var menu6 = Coffee(name:"인스타라떼",ingredient:["에스프레쏘","인스타그램"],needMilk: true)
+//var menu7 = Coffee(name:"자몽에이드",ingredient:["자몽청","탄산수"],needMilk: false)
+//
+//menu6.readrecipe()
+//menu6.pourmilk()
 
