@@ -191,37 +191,37 @@ import Foundation
 //---------------------------------
 // 배열 예제 08
 //---------------------------------
-//let answer: [Int] = [1, 1, 4, 2, 3]
-//var youranswer: [Int] = []
-//var score: [String] = []
-//print("=====  채점하기!  =====")
-//print("답을 입력하세요.")
-//for i in 1...5{
-//    print("\(i)번답:",terminator: "")
-//    var x = Int(readLine()!)!
-//    youranswer.append(x)
-//}
-//print("=====  정답확인  =====")
-//for i in 0...4{
-//    if answer[i] == youranswer[i]{
-//        score.append("O")
-//        print("O",terminator: " ")
-//    }else{
-//        score.append("x")
-//        print("X",terminator: " ")
-//    }
-//}
-//
-//var sc: Int = 0
-//for i in score{
-//    if i == "O"{
-//      sc += 20
-//    }else{
-//        continue
-//    }
-//}
-//print("총점: \(sc)")
-////var x: Int = score.count(for: "O")
+let answer: [Int] = [1, 1, 4, 2, 3]
+var youranswer: [Int] = []
+var score: [String] = []
+print("=====  채점하기!  =====")
+print("답을 입력하세요.")
+for i in 1...5{
+    print("\(i)번답:",terminator: "")
+    let x = Int(readLine()!)!
+    youranswer.append(x)
+}
+print("=====  정답확인  =====")
+for i in 0...4{
+    if answer[i] == youranswer[i]{
+        score.append("O")
+        print("O",terminator: " ")
+    }else{
+        score.append("x")
+        print("X",terminator: " ")
+    }
+}
+
+var sc: Int = 0
+for i in score{
+    if i == "O"{
+      sc += 20
+    }else{
+        continue
+    }
+}
+print("총점: \(sc)")
+//var x: Int = score.count(for: "O")
 
 //---------------------------------
 // 배열 예제 09
