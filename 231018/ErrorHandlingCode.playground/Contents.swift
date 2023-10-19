@@ -216,32 +216,12 @@ enum ParsingError: Error {
     case invalidJSON
 }
 
-struct JsonData: Decodable {
-    let name: String
-    let age: Int
-    let hobbies: [String]
-}
 
 func parseJSON(_ jsonString: String) throws -> Dictionary<String, Any>{
     if let data = jsonString.data(using: .utf8) {
         if let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]{ return jsonObject }
     }
     return [:]
-}
-
-
-func parseJSON(_ jsonString: String) throws -> [String : Any] {
-    do {
-        let data = jsonString.data(using: .utf8)
-        var dictionary: [String : Any] = [:]
-        let json: JsonData = try JSONDecoder().decode(JsonData.self, from: data!)
-        dictionary["name"] = json.name
-        dictionary["age"] = json.age
-        dictionary["hobbies"] = json.hobbies
-        return dictionary
-    } catch {
-        throw ParsingError.invalidJSON
-    }
 }
 
 let jsonString = """
