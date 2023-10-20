@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView { // ✨
+        NavigationView {
             List {
                 Section{
                     CustomCell(cellNum: "👀 오전 실습")
                     CustomCell2(cellNum2: "👀 예제 1 - 시간 계산기")
                     CustomCell3(cellNum3: "👀 예제 2 - 급여 계산기")
-
+                    
                 } header: {
-                        Text("10월 11일")
+                    Text("10월 11일")
                         .font(.headline)
                 }
                 Section{
@@ -26,20 +26,36 @@ struct ContentView: View {
                     CustomCell6(cellNum6: "👀 예제 4 - 큰수 - 작은수")
                     CustomCell7(cellNum7: "👀 예제 5 - 농구공 담기")
                 } header: {
-                        Text("10월 12일")
+                    Text("10월 12일")
                         .font(.headline)
                 }
                 Section{
                     CustomCell8(cellNum8: "👀 오후 실습")
                     CustomCell9(cellNum9: "👀 Chapter 23 튜토리얼")
-
+                    
                 } header: {
-                        Text("10월 13일")
+                    Text("10월 13일")
+                        .font(.headline)
+                }
+                Section{
+                    CustomCell10(cellNum10: "👀 예제1")
+                    CustomCell11(cellNum11: "👀 예제2")
+                    CustomCell12(cellNum12: "👀 예제3")
+                } header: {
+                    Text("10월 16일")
+                        .font(.headline)
+                }
+                Section{
+                    CustomCell13(cellNum13: "동시성")
+                    CustomCell14(cellNum14: "👀")
+                    CustomCell15(cellNum15: "👀")
+                } header: {
+                    Text("10월 19일")
                         .font(.headline)
                 }
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("🙆 10월 11~13일 강의")
+            .navigationBarTitle("🙆 10월")
         }
     }
 }
@@ -137,7 +153,66 @@ struct CustomCell9: View {
         }
     }
 }
-
+struct CustomCell10: View {
+    var cellNum10: String
+    var body: some View {
+        HStack {
+            NavigationLink(destination: DetailView10()) {
+                Text("\(cellNum10)")
+            }
+        }
+    }
+}
+struct CustomCell11: View {
+    var cellNum11: String
+    var body: some View {
+        HStack {
+            NavigationLink(destination: DetailView11()) {
+                Text("\(cellNum11)")
+            }
+        }
+    }
+}
+struct CustomCell12: View {
+    var cellNum12: String
+    var body: some View {
+        HStack {
+            NavigationLink(destination: DetailView12()) {
+                Text("\(cellNum12)")
+            }
+        }
+    }
+}
+struct CustomCell13: View {
+    var cellNum13: String
+    var body: some View {
+        HStack {
+            NavigationLink(destination: DetailView13()) {
+                Text("\(cellNum13)")
+            }
+        }
+    }
+}
+struct CustomCell14: View {
+    var cellNum14: String
+    var body: some View {
+        HStack {
+            NavigationLink(destination: DetailView14()) {
+                Text("\(cellNum14)")
+            }
+        }
+    }
+}
+struct CustomCell15: View {
+    var cellNum15: String
+    var body: some View {
+        HStack {
+            NavigationLink(destination: DetailView15()) {
+                Text("\(cellNum15)")
+            }
+        }
+    }
+}
 //하위뷰로 작업하기(구조체 밖 구조체, 단, private 변수 접근 시 복잡해짐)
 struct MyStackView: View {
     var body: some View {
