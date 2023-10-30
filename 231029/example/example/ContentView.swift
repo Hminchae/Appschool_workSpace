@@ -26,12 +26,45 @@ struct ContentView: View {
                         .font(.title2)
                         .fontWeight(.bold)
                 }
-                NavigationLink(destination:fourthView()) {
-                    Text("예제4")
+                Text("=================================")
+                NavigationLink(destination:practice1()) {
+                    Text("예제1")
                         .font(.title2)
                         .fontWeight(.bold)
                 }
-                
+                NavigationLink(destination:practice2()) {
+                    Text("예제2")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                }
+                Text("=================================")
+                HStack{
+                    NavigationLink(destination:stackpractice1()) {
+                        Text("예제1")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                    }
+                    NavigationLink(destination:stackpractice2()) {
+                        Text("예제2")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                    }
+                    NavigationLink(destination:stackpractice3()) {
+                        Text("예제3")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                    }
+                    NavigationLink(destination:stackpractice4()) {
+                        Text("예제4")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                    }
+                    NavigationLink(destination:stackpractice5()) {
+                        Text("예제5")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                    }
+                }
             }
         }
     }

@@ -17,6 +17,6 @@ class HUtility {
         }
     }
     func isLeapYear(_ year: Int) -> Bool {
-        return year % 4 == 0 
+        return year % 4 == 0
     }
 }
