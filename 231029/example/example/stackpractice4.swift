@@ -16,6 +16,7 @@ struct stackpractice4: View {
         HStack(alignment: .firstTextBaseline, spacing: 5) {
             Text("Hello")
                 .font(.largeTitle)
+            Spacer()
             Text("World")
         }
         .padding()

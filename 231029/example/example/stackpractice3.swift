@@ -21,7 +21,6 @@ struct stackpractice3: View {
                     .fill(Color.green)
                     .frame(width: 50, height: 50)
                 Spacer()
-                Spacer()
             }
             HStack{
                 Spacer()
@@ -31,7 +30,6 @@ struct stackpractice3: View {
                 Spacer()
             }
             HStack{
-                Spacer()
                 Spacer()
                 Circle()
                     .fill(Color.orange)

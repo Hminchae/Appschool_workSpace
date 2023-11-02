@@ -17,7 +17,9 @@ struct stackpractice5: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("One")
+            Spacer()
             Text("Two")
+            Spacer()
             Text("Three")
         }
         Spacer()

@@ -17,7 +17,9 @@ struct stackpractice1: View {
             HStack(alignment: .bottom){
                 Text("Hello")
                     .font(.largeTitle)
+                    .frame(alignment: .leadingLastTextBaseline)
                 Text("world")
+                    .frame(alignment: .leadingLastTextBaseline)
             }
         }
     }

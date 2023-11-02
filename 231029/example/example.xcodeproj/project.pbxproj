@@ -25,6 +25,7 @@
 		B175927F2AEFA23500C745D1 /* stackpractice3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B175927E2AEFA23500C745D1 /* stackpractice3.swift */; };
 		B17592812AEFA24400C745D1 /* stackpractice4.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17592802AEFA24400C745D1 /* stackpractice4.swift */; };
 		B17592832AEFA25200C745D1 /* stackpractice5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17592822AEFA25200C745D1 /* stackpractice5.swift */; };
+		B19B83902AF0DB37001D34D9 /* ListNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19B838F2AF0DB37001D34D9 /* ListNavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		B175927E2AEFA23500C745D1 /* stackpractice3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stackpractice3.swift; sourceTree = "<group>"; };
 		B17592802AEFA24400C745D1 /* stackpractice4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stackpractice4.swift; sourceTree = "<group>"; };
 		B17592822AEFA25200C745D1 /* stackpractice5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stackpractice5.swift; sourceTree = "<group>"; };
+		B19B838F2AF0DB37001D34D9 /* ListNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				B175927E2AEFA23500C745D1 /* stackpractice3.swift */,
 				B17592802AEFA24400C745D1 /* stackpractice4.swift */,
 				B17592822AEFA25200C745D1 /* stackpractice5.swift */,
+				B19B838F2AF0DB37001D34D9 /* ListNavigationView.swift */,
 				B17592352AEEC5F400C745D1 /* Assets.xcassets */,
 				B17592372AEEC5F400C745D1 /* Preview Content */,
 			);
@@ -184,6 +187,7 @@
 				B17592792AEF953700C745D1 /* AlignmentZStackView.swift in Sources */,
 				B17592342AEEC5F300C745D1 /* ContentView.swift in Sources */,
 				B17592752AEF8CD800C745D1 /* practice1.swift in Sources */,
+				B19B83902AF0DB37001D34D9 /* ListNavigationView.swift in Sources */,
 				B17592832AEFA25200C745D1 /* stackpractice5.swift in Sources */,
 				B17592402AEEC79900C745D1 /* firstView.swift in Sources */,
 				B17592532AEF694200C745D1 /* AlignmentView.swift in Sources */,

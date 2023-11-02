@@ -37,7 +37,7 @@ struct ContentView: View {
                         .font(.title2)
                         .fontWeight(.bold)
                 }
-                Text("=================================")
+                Text("==============스택예제==============")
                 HStack{
                     NavigationLink(destination:stackpractice1()) {
                         Text("예제1")

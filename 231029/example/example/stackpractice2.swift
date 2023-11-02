@@ -45,20 +45,14 @@ struct stackpractice2: View {
                 .fill(Color.red)
                 .frame(width: 100, height: 100)
                 .alignmentGuide(VerticalAlignment.myAlignment) { d in
-                    d[VerticalAlignment.bottom]
-                }
-                .alignmentGuide(HorizontalAlignment.myAlignment) { d in
-                    d[HorizontalAlignment.trailing]
+                    d[VerticalAlignment.top]
                 }
             Rectangle()
                 .fill(Color.blue)
                 .frame(width: 50, height: 50)
                 .alignmentGuide(VerticalAlignment.myAlignment) { d in
-                    d[.leading]
-                }
-                .alignmentGuide(VerticalAlignment.myAlignment) { d in
-                    d[.top]
-                }
+                                    d[VerticalAlignment.bottom]
+                                }
         }
     }
 }
