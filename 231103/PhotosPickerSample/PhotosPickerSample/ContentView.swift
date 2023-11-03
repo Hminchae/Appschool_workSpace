@@ -6,16 +6,30 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ContentView: View {
+    
+    @State private var selectedPhoto: PhotosPickerItem?
+    @State private var image: Image?
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ZStack {
+                image?
+                    .resizable()
+                    .scaledToFit()
+            }
+            .toolbar {
+                PhotosPicker(selection: $selectedPhoto,
+                             matching: .images) {
+                    Image(systemName: "photo.fill")
+                }
+            }
+            .task(id: selectedPhoto) {
+                image = try? await  selectedPhoto?.loadTransferable(type: Image.self)
+            }
         }
-        .padding()
     }
 }
 
