@@ -336,89 +336,89 @@ print("end")
 //let mysc = MySubscripts(arr: ["Park", "Kim", "Lee"])
 //mysc[1]
 
-extension String {
-    subscript(idx: Int) -> String? {
-        guard (0..<count).contains(idx) else {
-            return nil
-        }
-        let target = index(startIndex, offsetBy: idx)
-        return String(self[target])
-    }
-}
+//extension String {
+//    subscript(idx: Int) -> String? {
+//        guard (0..<count).contains(idx) else {
+//            return nil
+//        }
+//        let target = index(startIndex, offsetBy: idx)
+//        return String(self[target])
+//    }
+//}
 
 //=========================================================================================
 // 예제 11
 //=========================================================================================
 // 예시 코드:
-protocol Animal {
-    var name: String { get }
-    func makeSound()
-}
-
-extension Animal {
-    var name: String {
-        get {
-            return ""
-        }
-    }
-    func introduce() {
-        print("My name is \(name)")
-    }
-}
-class Dog: Animal {
-    var name: String
-
-    init(name: String) {
-        self.name = name
-    }
-
-    func makeSound() {
-        print("Woof!")
-    }
-}
-
-struct Cat: Animal {
-    var name: String
-
-    func makeSound() {
-        print("Meow!")
-    }
-}
-
-enum Bird: Animal {
-    case parrot(String)
-    case sparrow(String)
-
-    var name: String {
-        switch self {
-        case .parrot(let name):
-            return name
-        case .sparrow(let name):
-            return name
-        }
-    }
-
-    func makeSound() {
-        switch self {
-        case .parrot:
-            print("Hello!")
-        case .sparrow:
-            print("Chirp!")
-        }
-    }
-}
-
-// 추가 코드
-//...
-
-let dog = Dog(name: "Max")
-let cat = Cat(name: "Lily")
-let bird = Bird.parrot("Jack")
-
-dog.introduce()     // My name is Max.
-cat.introduce()     // My name is Lily.
-bird.introduce()    // My name is Jack.
-
+//protocol Animal {
+//    var name: String { get }
+//    func makeSound()
+//}
+//
+//extension Animal {
+//    var name: String {
+//        get {
+//            return ""
+//        }
+//    }
+//    func introduce() {
+//        print("My name is \(name)")
+//    }
+//}
+//class Dog: Animal {
+//    var name: String
+//
+//    init(name: String) {
+//        self.name = name
+//    }
+//
+//    func makeSound() {
+//        print("Woof!")
+//    }
+//}
+//
+//struct Cat: Animal {
+//    var name: String
+//
+//    func makeSound() {
+//        print("Meow!")
+//    }
+//}
+//
+//enum Bird: Animal {
+//    case parrot(String)
+//    case sparrow(String)
+//
+//    var name: String {
+//        switch self {
+//        case .parrot(let name):
+//            return name
+//        case .sparrow(let name):
+//            return name
+//        }
+//    }
+//
+//    func makeSound() {
+//        switch self {
+//        case .parrot:
+//            print("Hello!")
+//        case .sparrow:
+//            print("Chirp!")
+//        }
+//    }
+//}
+//
+//// 추가 코드
+////...
+//
+//let dog = Dog(name: "Max")
+//let cat = Cat(name: "Lily")
+//let bird = Bird.parrot("Jack")
+//
+//dog.introduce()     // My name is Max.
+//cat.introduce()     // My name is Lily.
+//bird.introduce()    // My name is Jack.
+//
 
 
 //=========================================================================================
@@ -429,17 +429,368 @@ protocol Flyable {
     var speed: Double { get set }
 }
 
-extension Flyable {
-    var speed: Double {
-        get {
-            return 0.0
-        }
-    }
-    func fly
-}
 struct Bird : Flyable {
     var speed: Double
+    init(speed: Double) {
+        self.speed = speed
+    }
 }
 
-let bard = Bird(speed: 30)
+extension Flyable {
+    func fly() {
+        print("Flying at \(speed) km/h")
+    }
+}
+
+
+let bard = Bird(speed: 30.0)
 bard.fly()
+
+
+//extension String {
+//    subscript(idx: Int) -> String? {
+//        guard (0..<count).contains(idx) else {
+//            return nil
+//        }
+//        let target = index(startIndex, offsetBy: idx)
+//        return String(self[target])
+//    }
+//}
+//extension String {
+//    subscript(range: ClosedRange<Int>) -> String {
+//        let start = self.index(self.startIndex, offsetBy: range.startIndex)
+//        let end = self.index(self.startIndex,offsetBy: range.endIndex)
+//        
+//        return String(self[start...end])
+//    }
+//}
+//var str: String = "helloHwangminchae"
+//print(str[1...5])
+//
+
+
+//func swapTWoValue<Element>(_ a: inout Element, _ b: inout Element) {
+//    let temporaryA = a
+//    a = b
+//    b = temporaryA
+//}
+//swapTWoValue(5, 6)
+
+//===============================================================
+// 제네릭 예제 01
+//===============================================================
+struct Stack<T> {
+    var items = [T]()
+    mutating func push(_ item: T) {
+        items.append(item)
+    }
+    mutating func pop() -> T {
+        return items.removeLast()
+    }
+}
+
+var intStack = Stack<Int>()
+intStack.push(3)
+intStack.push(5)
+print(intStack.pop()) // 5
+
+var stringStack = Stack<String>()
+stringStack.push("Hello")
+stringStack.push("World")
+print(stringStack.pop())
+//===============================================================
+// 제네릭 예제 02
+//===============================================================
+func swap<T>(_ a: inout T, _ b: inout T) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+
+var a = 10
+var b = 20
+swap(&a, &b)
+print(a, b) // 20, 10
+//===============================================================
+// 제네릭 예제 03
+//===============================================================
+struct Stack2<T> {
+    
+    var items = [T]()
+    mutating func push(_ item: T) {
+        items.append(item)
+    }
+    mutating func pop() -> T {
+        return items.removeLast()
+    }
+    mutating func peek() -> T {
+        return items.index(after: items.count - 1) as! T
+    }
+    func isEmpty() -> Bool {
+        if items.count == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+// 예시 코드:
+var stack = Stack2<Int>()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+print(stack.pop())   // 3
+print(stack.peek())  // 2
+print(stack.isEmpty) // false
+
+
+extension String {
+    // 1..<5 는 Range 타입
+    // 1...5 는 ClosedRange 타입
+    subscript(range: ClosedRange<Int>) -> String {
+        // ClosedRange 를 Range 타입으로 변환
+        let range = range.first!..<range.count
+        
+        let start = self.index(self.startIndex, offsetBy: range.startIndex)
+        let end = self.index(self.startIndex,offsetBy: range.endIndex)
+        
+        return String(self[start...end])
+    }
+}
+var str: String = "helloHwangminchae"
+print(str[1...5])
+
+//===============================================================
+// 제네릭 예제 04
+//===============================================================
+struct Queue<T> {
+    var elements: [T] = []
+    var count: Int {
+        return elements.count
+    }
+    var isEmpty: Bool {
+        return elements.isEmpty
+    }
+    //메서드
+    mutating func enqueue(_ element: T)  {
+        elements.append(element)
+    }
+    mutating func dequeue() -> T? {
+        !elements.isEmpty ? elements.removeFirst() : nil
+    }
+    
+    mutating func front() -> T? {
+        !elements.isEmpty ? elements[0] : nil
+    }
+}
+
+
+var queue = Queue<String>()
+queue.enqueue("A")
+queue.enqueue("B")
+queue.enqueue("C")
+print(queue.dequeue()!) // A
+print(queue.front()!) // B
+print(queue.isEmpty) // false
+
+//===============================================================
+// 제네릭 예제 05
+//===============================================================
+func printType<T>(_ x: T) {
+    print("The type of \(x) is \(type(of: x))")
+}
+
+printType(3) // The type of 3 is Int
+printType("Hello") // The type of Hello is String
+printType(true) // The type of true is Bool
+//===============================================================
+// 제네릭 예제 06
+//===============================================================
+class Node<T> {
+    var key: T
+    var value: T
+    init(key: T, value: T) {
+        self.key = key
+        self.value = value
+    }
+}
+
+let node = Node(key: "name", value: "Alice")
+print(node.key) // name
+print(node.value) // Alice
+
+//===============================================================
+// 제네릭 예제 07
+//===============================================================
+
+func isEqual<T: Equatable>(_ x: T, _ y: T) -> Bool {
+    x == y ? true : false
+}
+print(isEqual(1, 1)) // true
+print(isEqual("Hello", "World")) // false
+print(isEqual(true, false)) // false
+
+
+//===============================================================
+// 제네릭 예제 08
+//===============================================================
+func isInt<T>(_ value: T) -> Bool {
+    return value is Int
+}
+print(isInt(3)) // true
+print(isInt("Hello")) // false
+print(isInt(true)) // false
+//===============================================================
+// 제네릭 예제 09
+//===============================================================
+
+
+func castToInt<T>(_ value: T) -> Int? {
+    if let intValue = value as? Int {
+        return intValue
+    } else {
+        return nil
+    }
+}
+print(castToInt(3)) // 3
+print(castToInt("Hello")) // nil
+print(castToInt(true)) // nil
+
+//===============================================================
+// 제네릭 예제 10
+//===============================================================
+func swapFirstAndLast<T>(_ arr: inout [T]) -> [T] {
+    let tmp = arr[0]
+    arr[0] = arr[arr.count - 1]
+    arr[arr.count - 1] = tmp
+    return arr
+}
+//var array = [1, 2, 3, 4, 5]
+//swapFirstAndLast(&array)
+//print(array) // [5, 2, 3, 4, 1]
+//
+//var array2 = ["A", "B", "C", "D"]
+//swapFirstAndLast(&array2)
+//print(array2) // ["D", "B", "C", "A"]
+
+//===============================================================
+// 제네릭 예제 11
+//===============================================================
+func printReverse<T>(_ arr: inout [T]) {
+    while true {
+        print(arr.last!)
+        arr.removeLast()
+        if arr.isEmpty {
+            break
+        }
+    }
+}
+
+
+var array = [1, 2, 3, 4, 5]
+printReverse(&array)
+// 5
+// 4
+// 3
+// 2
+// 1
+
+var array2 = ["A", "B", "C", "D"]
+printReverse(&array2)
+// D
+// C
+// B
+// A
+//===============================================================
+// 제네릭 예제 12
+//===============================================================
+class Node<T> {
+    var value: T
+    var next: Node?
+
+    init(value: T) {
+        self.value = value
+    }
+}
+
+struct LinkedList<T> {
+    private var head: Node<T>?
+
+    mutating func append(_ value: T) {
+        let newNode = Node(value: value)
+        if head == nil {
+            head = newNode
+            return
+        }
+
+        var current = head
+        while current?.next != nil {
+            current = current?.next
+        }
+        current?.next = newNode
+    }
+
+    mutating func insert(_ value: T, at index: Int) {
+        let newNode = Node(value: value)
+        if index == 0 {
+            newNode.next = head
+            head = newNode
+            return
+        }
+
+        var current = head
+        var i = 0
+        var previous: Node<T>?
+        while current?.next != nil && i < index {
+            previous = current
+            current = current?.next
+            i += 1
+        }
+        previous?.next = newNode
+        newNode.next = current
+    }
+
+    mutating func remove(at index: Int) -> T? {
+        if index == 0 {
+            let value = head?.value
+            head = head?.next
+            return value
+        }
+
+        var current = head
+        var i = 0
+        var previous: Node<T>?
+        while current?.next != nil && i < index {
+            previous = current
+            current = current?.next
+            i += 1
+        }
+        previous?.next = current?.next
+        return current?.value
+    }
+
+    func nodeAt(_ index: Int) -> Node<T>? {
+        var current = head
+        var i = 0
+        while current?.next != nil && i < index {
+            current = current?.next
+            i += 1
+        }
+        return current
+    }
+
+}
+
+// 예시 코드:
+var list = LinkedList<Int>()
+list.append(1)
+list.append(2)
+list.append(3)
+list.insert(4, at: 1)
+list.remove(at: 2)
+print(list.nodeAt(0)?.value) // 1
+print(list.nodeAt(1)?.value) // 4
+print(list.nodeAt(2)?.value) // 3
+
+
