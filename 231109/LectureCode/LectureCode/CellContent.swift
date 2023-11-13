@@ -12,7 +12,18 @@ struct CellContent: View {
     
     var body: some View {
         Text("\(index)")
-            .frame(minWidth: 50, maxWidth: .infinity, minHeight: 100)
+            .frame(minWidth: 50, minHeight: 50)
+            .background(color)
+            .cornerRadius(8)
+            .font(.largeTitle)
+    }
+}
+struct EmptyCell: View {
+    var color: Color
+    
+    var body: some View {
+        Text("")
+            .frame(minWidth: 50, minHeight: 50)
             .background(color)
             .cornerRadius(8)
             .font(.largeTitle)
