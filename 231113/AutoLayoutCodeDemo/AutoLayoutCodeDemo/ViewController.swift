@@ -37,12 +37,12 @@ class ViewController: UIViewController {
             myView1.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0),
             myView1.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             myView1.trailingAnchor.constraint(equalTo: self.view.centerXAnchor),
-            myView1.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.333333, constant: 0),
+            myView1.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/3, constant: 0),
             
             myView2.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0),
             myView2.leadingAnchor.constraint(equalTo: self.view.centerXAnchor),
             myView2.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            myView2.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.333333, constant: 0)
+            myView2.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/3, constant: 0)
         ])
     }
 }
