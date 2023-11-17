@@ -27,3 +27,17 @@
 * 231023 - 동시성(actor), collection types
 * 231024 - 클로저와 고차함수
 * 231025 - 옵셔널 체이닝
+* 231026 - 동시성 및 생명주기 이벤트 수정자
+* 231030 - ObservedObject, EnvironmentObject 활용
+
+## 11월
+* 231101 - List 활용
+* 231102 - HIG
+* 231103 - NavigationStack
+* 231106 - NavigationStack, Subscripts 
+* 231107 - Generic, Objective-C
+* 231108 - Grid
+* 231109 - Grid, GridRow
+* 231110 - HIG, UIKit 기초
+* 231113 - AutoLayout(storyboardBase, codeBase)
+* 231114 - 교차계층구현 AutoLayout Constraints 등
