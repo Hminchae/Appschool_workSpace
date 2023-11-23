@@ -46,6 +46,7 @@ class ViewController: UIViewController {
 
     @IBAction func saveContact(_ sender: Any) {
         let contactDB = FMDatabase(path: databasePath)
+        var items = [Contact]()
         
         if contactDB.open() {
             let sql = "insert into contacts (name, address, phone) values ('\(name.text ?? "")', '\(address.text ?? "")','\(phone.text ?? "")')"
@@ -69,7 +70,41 @@ class ViewController: UIViewController {
     }
     
     @IBAction func findContact(_ sender: Any) {
+        let contactDB = FMDatabase(path: databasePath)
+        if contactDB.open() {
+            let sql = "select address, phone from contacts where name='\(name.text ?? "")'"
+            
+            do {
+                let results: FMResultSet? = try contactDB.executeQuery(sql, values: nil)
+                while results?.next() == true {
+                    let id = results?.int(forColumn: "id")
+                    let name = results?.int(forColumn: "name")
+                    let address = results?.int(forColumn: "address")
+                    let phone = results?.int(forColumn: "phone")
+                    address.text = results?.string(forColumn: "address")
+                    phone.text = results?.string(forColumn: "phone")
+                    status.text = "Record Found"
+                } else {
+                    status.text = "Record Not Found"
+                    address.text = ""
+                    phone.text = ""
+                }
+            } catch {
+                print("Error: \(contactDB.lastErrorMessage())")
+                
+            }
+            contactDB.close()
+            
+        }else {
+            print("Error: \(contactDB.lastErrorMessage())")
+        }
     }
     
 }
 
+struct Contact {
+    let id: Int?
+    let name: String?
+    let address: String?
+    let phone: String?
+}
