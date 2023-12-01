@@ -75,7 +75,7 @@ class NewsAPI: ObservableObject {
 //            print(str)
             do {
                 let json = try JSONDecoder().decode(Results.self, from: data)
-                print(json.articles.count) // 100개
+                print(json.articles.first) // 100개
                 DispatchQueue.main.async {
                     self.posts = json.articles
                 }
